@@ -4,11 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>履歷 · Mark</title>
+  <meta name="description" content="Mark 的個人頁面：部落格、履歷和工具箱。">
+  <link rel="alternate" hreflang="zh-TW" href="https://mark.tw/cv/">
+  <link rel="alternate" hreflang="en" href="https://mark.tw/en/cv/">
+  <link rel="alternate" hreflang="ja" href="https://mark.tw/ja/cv/">
   <link rel="icon" href="/avatar.png">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <main>
+    <nav class="lang" aria-label="Language"><a href="/cv/" hreflang="zh-TW" lang="zh-TW" data-lang="zh" aria-current="true">中文</a><a href="/en/cv/" hreflang="en" lang="en" data-lang="en">English</a><a href="/ja/cv/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></nav>
     <section class="prose">
       <h1>履歷 CV</h1>
       <p>整理中，之後會放在這裡。</p>
@@ -16,5 +21,10 @@
     </section>
     <footer>© 2026 Mark · mark.tw</footer>
   </main>
+  <script>
+    document.querySelectorAll(".lang a").forEach(function (a) {
+      a.addEventListener("click", function () { try { localStorage.setItem("lang", a.dataset.lang); } catch (e) {} });
+    });
+  </script>
 </body>
 </html>

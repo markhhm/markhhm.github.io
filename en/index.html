@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mark</title>
+  <meta name="description" content="Mark's personal page: blog, CV and toolbox.">
+  <link rel="alternate" hreflang="zh-TW" href="https://mark.tw/">
+  <link rel="alternate" hreflang="en" href="https://mark.tw/en/">
+  <link rel="alternate" hreflang="ja" href="https://mark.tw/ja/">
+  <link rel="icon" href="/avatar.png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <nav class="lang" aria-label="Language"><a href="/" hreflang="zh-TW" lang="zh-TW" data-lang="zh">中文</a><a href="/en/" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></nav>
+    <section class="profile">
+      <img src="/avatar.png" alt="Mark's avatar" width="112" height="112">
+      <h1>Mark</h1>
+      <p>Networking, infra, life and travel.</p>
+    </section>
+
+    <h2>Find me</h2>
+    <div class="grid">
+      <a class="card" href="https://blog.mark.tw/">
+        <strong>Blog</strong>
+        <span>Tech notes, essays and travel (in Chinese)</span>
+      </a>
+      <a class="card" href="/en/cv/">
+        <strong>CV</strong>
+        <span>Coming soon</span>
+      </a>
+      <a class="card" href="https://github.com/markhhm">
+        <strong>GitHub</strong>
+        <span>github.com/markhhm</span>
+      </a>
+    </div>
+
+    <h2>Toolbox</h2>
+    <div class="grid">
+      <a class="card" href="https://s.mark.tw/admin/">
+        <strong>Short links s.mark.tw</strong>
+        <span>Self-hosted Shlink (login required)</span>
+      </a>
+    </div>
+
+    <footer>© 2026 Mark · mark.tw</footer>
+  </main>
+
+  <script>
+    document.querySelectorAll(".lang a").forEach(function (a) {
+      a.addEventListener("click", function () { try { localStorage.setItem("lang", a.dataset.lang); } catch (e) {} });
+    });
+  </script>
+</body>
+</html>

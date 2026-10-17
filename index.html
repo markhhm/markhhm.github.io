@@ -4,12 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mark</title>
-  <meta name="description" content="Mark 的個人頁面：部落格、履歷和自架的小工具。">
+  <meta name="description" content="Mark 的個人頁面：部落格、履歷和工具箱。">
+  <link rel="alternate" hreflang="zh-TW" href="https://mark.tw/">
+  <link rel="alternate" hreflang="en" href="https://mark.tw/en/">
+  <link rel="alternate" hreflang="ja" href="https://mark.tw/ja/">
   <link rel="icon" href="/avatar.png">
   <link rel="stylesheet" href="/style.css">
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem("lang"); } catch (e) {}
+      if (saved) { if (saved !== "zh") location.replace("/" + saved + "/"); return; }
+      var l = (navigator.languages && navigator.languages[0] || navigator.language || "").toLowerCase();
+      if (l.indexOf("ja") === 0) location.replace("/ja/");
+      else if (l && l.indexOf("zh") !== 0) location.replace("/en/");
+    })();
+  </script>
 </head>
 <body>
   <main>
+    <nav class="lang" aria-label="Language"><a href="/" hreflang="zh-TW" lang="zh-TW" data-lang="zh" aria-current="true">中文</a><a href="/en/" hreflang="en" lang="en" data-lang="en">English</a><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></nav>
     <section class="profile">
       <img src="/avatar.png" alt="Mark 的頭像" width="112" height="112">
       <h1>Mark</h1>
@@ -32,15 +46,20 @@
       </a>
     </div>
 
-    <h2>自架的小工具</h2>
+    <h2>工具箱</h2>
     <div class="grid">
-      <div class="card">
+      <a class="card" href="https://s.mark.tw/admin/">
         <strong>短網址 s.mark.tw</strong>
-        <span>自架的 Shlink 短網址服務</span>
-      </div>
+        <span>自架的 Shlink 短網址服務（需登入）</span>
+      </a>
     </div>
 
     <footer>© 2026 Mark · mark.tw</footer>
   </main>
+  <script>
+    document.querySelectorAll(".lang a").forEach(function (a) {
+      a.addEventListener("click", function () { try { localStorage.setItem("lang", a.dataset.lang); } catch (e) {} });
+    });
+  </script>
 </body>
 </html>

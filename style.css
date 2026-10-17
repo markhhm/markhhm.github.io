@@ -64,3 +64,7 @@ a.card:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
 .prose { background: var(--card-bg); border-radius: var(--radius); padding: 1.5rem; }
 .prose a { color: var(--btn-content); }
 footer { text-align: center; font-size: 0.85rem; color: var(--text-dim); margin-top: 2.5rem; }
+.lang { display: flex; justify-content: flex-end; gap: 0.25rem; margin-bottom: 0.75rem; font-size: 0.85rem; }
+.lang a { color: var(--text-dim); text-decoration: none; padding: 0.15rem 0.6rem; border-radius: 999px; }
+.lang a:hover { background: var(--btn-bg); }
+.lang a[aria-current="true"] { background: var(--btn-bg); color: var(--btn-content); }
