@@ -46,6 +46,7 @@ main { max-width: 40rem; margin: 0 auto; padding: 3rem 1rem 2rem; }
   margin: 0.4rem auto 0; border-radius: 999px; background: var(--primary);
 }
 .profile p { margin: 0.5rem 0 0; color: var(--text-dim); }
+.profile p.gap { margin-top: 1rem; }
 h2 { font-size: 1rem; margin: 2rem 0.25rem 0.75rem; color: var(--text-dim); font-weight: 500; }
 .grid { display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
 .card {
