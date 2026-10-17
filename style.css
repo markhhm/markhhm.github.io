@@ -1,0 +1,66 @@
+/* Colors mirror the blog's Fuwari theme (hue 250) so both sites look like one */
+:root {
+  --hue: 250;
+  --primary: oklch(0.70 0.14 var(--hue));
+  --page-bg: oklch(0.95 0.01 var(--hue));
+  --card-bg: white;
+  --btn-bg: oklch(0.95 0.025 var(--hue));
+  --btn-bg-hover: oklch(0.9 0.05 var(--hue));
+  --btn-content: oklch(0.55 0.12 var(--hue));
+  --text: oklch(0.25 0.02 var(--hue));
+  --text-dim: oklch(0.25 0.02 var(--hue) / 0.6);
+  --radius: 1rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: oklch(0.75 0.14 var(--hue));
+    --page-bg: oklch(0.16 0.014 var(--hue));
+    --card-bg: oklch(0.23 0.015 var(--hue));
+    --btn-bg: oklch(0.33 0.035 var(--hue));
+    --btn-bg-hover: oklch(0.38 0.04 var(--hue));
+    --btn-content: oklch(0.75 0.1 var(--hue));
+    --text: oklch(0.95 0.01 var(--hue));
+    --text-dim: oklch(0.95 0.01 var(--hue) / 0.6);
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: Roboto, system-ui, -apple-system, "PingFang TC", "Noto Sans TC", sans-serif;
+  line-height: 1.6;
+}
+main { max-width: 40rem; margin: 0 auto; padding: 3rem 1rem 2rem; }
+.profile {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+.profile img { width: 7rem; height: 7rem; border-radius: var(--radius); }
+.profile h1 { margin: 0.75rem 0 0.25rem; font-size: 1.5rem; }
+.profile h1::after {
+  content: ""; display: block; width: 1.25rem; height: 0.25rem;
+  margin: 0.4rem auto 0; border-radius: 999px; background: var(--primary);
+}
+.profile p { margin: 0.5rem 0 0; color: var(--text-dim); }
+h2 { font-size: 1rem; margin: 2rem 0.25rem 0.75rem; color: var(--text-dim); font-weight: 500; }
+.grid { display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+.card {
+  display: block;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+a.card:hover { background: var(--btn-bg); }
+a.card:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.card strong { display: block; color: var(--btn-content); }
+.card span { font-size: 0.9rem; color: var(--text-dim); }
+.prose { background: var(--card-bg); border-radius: var(--radius); padding: 1.5rem; }
+.prose a { color: var(--btn-content); }
+footer { text-align: center; font-size: 0.85rem; color: var(--text-dim); margin-top: 2.5rem; }
