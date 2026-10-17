@@ -1,6 +1,6 @@
-/* Colors mirror the blog's Fuwari theme (hue 250) so both sites look like one */
+/* Colors mirror the blog's Fuwari theme (hue 241, from the avatar) so both sites look like one */
 :root {
-  --hue: 250;
+  --hue: 241;
   --primary: oklch(0.70 0.14 var(--hue));
   --page-bg: oklch(0.95 0.01 var(--hue));
   --card-bg: white;
