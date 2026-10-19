@@ -5,8 +5,8 @@
   --line: #C8C3B8;
   --text: #22201D;
   --mute: rgba(34, 32, 29, .66);
-  --accent: #D97706;
-  --accent-ink: #9A3412; /* accent dark enough for small text and focus rings on light */
+  --accent: #3A8FB7; /* 千草 chigusa: avatar-sky hue, muted like ink on paper */
+  --accent-ink: #006284; /* 縹 hanada: dark enough for small text and focus rings on light */
   --lh: 1.85;
   --ls: normal;
 }
@@ -14,13 +14,13 @@
   :root:not([data-theme="light"]) {
     color-scheme: dark;
     --bg: #161413; --line: #2C2A28; --text: #D9D4CB; --mute: rgba(217, 212, 203, .62);
-    --accent-ink: #D97706; --lh: 1.9; --ls: .01em;
+    --accent: #7DB9DE; --accent-ink: #7DB9DE; /* 勿忘草 wasurenagusa */ --lh: 1.9; --ls: .01em;
   }
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
   --bg: #161413; --line: #2C2A28; --text: #D9D4CB; --mute: rgba(217, 212, 203, .62);
-  --accent-ink: #D97706; --lh: 1.9; --ls: .01em;
+  --accent: #7DB9DE; --accent-ink: #7DB9DE; /* 勿忘草 wasurenagusa */ --lh: 1.9; --ls: .01em;
 }
 
 * { box-sizing: border-box; }
